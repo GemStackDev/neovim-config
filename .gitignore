@@ -1,0 +1,18 @@
+# Swap, backup, and undo files
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.undo
+
+# Lazy.nvim installed plugins (auto-downloaded)
+.local/
+.cache/
+.state/
+
+# Session and log files
+session.vim
+plugin/
+site/
+.DS_Store
