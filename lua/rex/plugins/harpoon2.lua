@@ -54,5 +54,10 @@ return {
 		vim.keymap.set("n", "<C-S-K>", function()
 			harpoon:list():next()
 		end, { desc = "Harpoon: Next File" })
+
+		-- Toggle quick menu
+		vim.keymap.set("n", "<C-u>", function()
+			harpoon.ui:toggle_quick_menu(harpoon:list())
+		end)
 	end,
 }
