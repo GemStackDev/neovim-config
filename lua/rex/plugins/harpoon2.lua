@@ -1,6 +1,7 @@
 return {
 	"ThePrimeagen/harpoon",
 	branch = "harpoon2",
+	lazy = false,
 	dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" }, -- Add Telescope as a dependency
 	config = function()
 		local harpoon = require("harpoon")

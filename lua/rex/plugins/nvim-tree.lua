@@ -58,6 +58,12 @@ return {
 					".Trash",
 					".lesshst",
 					".zprofile",
+					".editorconfig",
+					".bashrc",
+					".fzf.bash",
+					".p10k.zsh",
+					".zsh_history",
+					".fzf.zsh",
 				},
 			},
 			git = {
