@@ -57,7 +57,7 @@ return {
 		end, { desc = "Harpoon: Next File" })
 
 		-- Toggle quick menu
-		vim.keymap.set("n", "<C-u>", function()
+		vim.keymap.set("n", "<C-i>", function()
 			harpoon.ui:toggle_quick_menu(harpoon:list())
 		end)
 	end,
