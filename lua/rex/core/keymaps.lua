@@ -2,13 +2,29 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
+-- exit i mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
-keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+-- highlight search
+keymap.set("n", "<leader>hh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
+
+-- cusor management
+keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Keep page scroll cursor centered" }) -- / pagescroll cursor centering
+keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Keep page scroll cursor centered" }) -- / pagescroll cursor centering
+keymap.set("n", "n", "nzzzv", { desc = "Keep '/' cursor centered" }) -- / searchscroll cursor centering
+keymap.set("n", "N", "Nzzzv", { desc = "Keep '/' cursor centered" }) -- / searchscroll cursor centering
+
+keymap.set("n", "J", "mzJ`z", { desc = "Keep 'J' cursor stable" }) -- / J does not move cursor to the end of the line
+
+-- clipboard management
+keymap.set("x", "<leader>p", '"_dP', { desc = "Retain clipboard after p" }) -- retain clipboard buffer after p
+
+-- replace words
+keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<left><left><Left>", { desc = "Replace word" }) -- Replace word under cursor file wide
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
