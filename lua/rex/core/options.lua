@@ -37,4 +37,4 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 -- scrolloff
-opt.scrolloff = 8 -- 7 lines kept in view below
+opt.scrolloff = 8 -- 8 lines kept in view below
